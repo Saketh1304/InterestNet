@@ -118,7 +118,7 @@ app.use('/api/search-interests', searchInterestsRoutes);
 
 const PORT = process.env.PORT || 6001;
 mongoose
-  .connect("mongodb+srv://interestNet:vBFo4fS3b3yD4rEi@minor.ioilrpi.mongodb.net/?retryWrites=true&w=majority", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
